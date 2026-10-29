@@ -1,0 +1,21 @@
+# Raw dataset is large and is tracked separately from the analysis code.
+Fraudzen-dataset/
+
+# Generated tables, plots, and model artifacts.
+outputs/
+
+# Python environments and caches.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Jupyter runtime files.
+.ipynb_checkpoints/
+
+# Editor and operating-system files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
