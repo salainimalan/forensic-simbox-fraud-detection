@@ -54,17 +54,7 @@ PROJECT_REPORT.md        Detailed project explanation aligned with the presentat
 
 ## Running the project
 
-Run commands from the repository root:
-
-```powershell
-python forensic_pipeline\01_preprocess.py
-python forensic_pipeline\02_statistical_features.py
-python forensic_pipeline\03_traffic_features.py
-python forensic_pipeline\04_temporal_features.py
-python forensic_pipeline\05_forensic_eda.py
-```
-
-The modeling notebooks can then be opened and run in order through notebook 15. The notebooks expect the local FraudZen dataset and write generated artifacts under `outputs/`.
+Open the notebooks in order from notebook 1 through notebook 15. The main analysis, feature engineering, model training, evaluation, and risk-scoring work is contained in these notebooks. The notebooks expect the local FraudZen dataset and write generated artifacts under `outputs/`.
 
 ## Evaluation and limitations
 
