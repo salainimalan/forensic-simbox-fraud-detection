@@ -3,10 +3,13 @@
 ## Academic details
 
 Developed as part of the course on "Forensic Analytics" at Vellore Institute of Technology, Chennai.  
-by "Name 1", "Name 2", ... , "Name n"  
+by Salai Nimalan  
 Subject Code: CSE4074  
 Semester: Fall 2026-27  
 Professor: Dr. S. Johanan Joysingh
+
+**Author:** Salai Nimalan  
+**Programme:** Integrated M.Tech. Computer Science and Business Analytics
 
 ## 1. Project objective
 

@@ -1,10 +1,15 @@
 # Forensic SIMBox Fraud Detection Using Subscriber Behaviour and History-Aware CDR Analysis
 
 Developed as part of the course on "Forensic Analytics" at Vellore Institute of Technology, Chennai.  
-by "Name 1", "Name 2", ... , "Name n"  
+by Salai Nimalan  
 Subject Code: CSE4074  
 Semester: Fall 2026-27  
 Professor: Dr. S. Johanan Joysingh
+
+## Author
+
+**Salai Nimalan**  
+Integrated M.Tech. Computer Science and Business Analytics
 
 ## Project overview
 
@@ -66,4 +71,4 @@ The research paper is not included in this repository at this stage.
 
 ## Team and repository access
 
-Replace the header placeholders with the final team names. Add the team members and GitHub user `johananj` as repository collaborators after the GitHub repository is created.
+Add any additional team members and GitHub user `johananj` as repository collaborators after the GitHub repository is created.
