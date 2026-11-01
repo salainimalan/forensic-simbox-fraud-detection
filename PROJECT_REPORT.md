@@ -8,9 +8,6 @@ Subject Code: CSE4074
 Semester: Fall 2026-27  
 Professor: Dr. S. Johanan Joysingh
 
-**Authors:** Salai Nimalan and Aditya Rao B  
-**Programme:** Integrated M.Tech. Computer Science and Business Analytics
-
 ## 1. Project objective
 
 The objective is to investigate whether behavioral patterns in synthetic CDR data can identify SIMs associated with naive SIMBox fraud. The project treats detection as a forensic analytics problem: first establish evidence patterns, then build a model, then produce an investigation-priority score.
@@ -75,3 +72,10 @@ The project contributes a compact forensic workflow that combines evidence aggre
 The dataset is synthetic and covers one day. It does not establish multi-day persistence, live-operator generalization, or production calibration. Further work should use multi-day traces, repeated simulation seeds, independent scenario validation, calibrated probabilities, operator-reviewed labels, and a corrected top-k risk-ranking evaluation.
 
 The research paper is intentionally not included in this repository at this stage.
+
+## Authors
+
+**Salai Nimalan**  
+Integrated M.Tech. Computer Science and Business Analytics  
+**Aditya Rao B**  
+Integrated M.Tech. Computer Science and Business Analytics

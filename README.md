@@ -6,13 +6,6 @@ Subject Code: CSE4074
 Semester: Fall 2026-27  
 Professor: Dr. S. Johanan Joysingh
 
-## Author
-
-**Salai Nimalan**  
-Integrated M.Tech. Computer Science and Business Analytics  
-**Aditya Rao B**  
-Integrated M.Tech. Computer Science and Business Analytics
-
 ## Project overview
 
 This project develops a forensic analytics pipeline for detecting naive SIMBox fraud from synthetic Call Detail Record (CDR) data. The pipeline combines descriptive forensic analysis, traffic and temporal evidence, mobility and social indicators, history-aware feature engineering, supervised machine learning, and SIM-level risk scoring.
@@ -71,6 +64,9 @@ Notebook 15 produces a transparent evidence-based risk score for investigation p
 
 The research paper is not included in this repository at this stage.
 
-## Team and repository access
+## Authors
 
-Add any additional team members and GitHub user `johananj` as repository collaborators after the GitHub repository is created.
+**Salai Nimalan**  
+Integrated M.Tech. Computer Science and Business Analytics  
+**Aditya Rao B**  
+Integrated M.Tech. Computer Science and Business Analytics
