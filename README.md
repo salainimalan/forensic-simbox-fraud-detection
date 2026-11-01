@@ -1,7 +1,7 @@
 # Forensic SIMBox Fraud Detection Using Subscriber Behaviour and History-Aware CDR Analysis
 
 Developed as part of the course on "Forensic Analytics" at Vellore Institute of Technology, Chennai.  
-by Salai Nimalan  
+by Salai Nimalan and Aditya Rao B  
 Subject Code: CSE4074  
 Semester: Fall 2026-27  
 Professor: Dr. S. Johanan Joysingh
@@ -9,6 +9,8 @@ Professor: Dr. S. Johanan Joysingh
 ## Author
 
 **Salai Nimalan**  
+Integrated M.Tech. Computer Science and Business Analytics  
+**Aditya Rao B**  
 Integrated M.Tech. Computer Science and Business Analytics
 
 ## Project overview
