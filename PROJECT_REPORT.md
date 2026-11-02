@@ -71,7 +71,7 @@ The project contributes a compact forensic workflow that combines evidence aggre
 
 The dataset is synthetic and covers one day. It does not establish multi-day persistence, live-operator generalization, or production calibration. Further work should use multi-day traces, repeated simulation seeds, independent scenario validation, calibrated probabilities, operator-reviewed labels, and a corrected top-k risk-ranking evaluation.
 
-The research paper is intentionally not included in this repository at this stage.
+The management publication is intentionally not included in this repository at this stage.
 
 ## Authors
 

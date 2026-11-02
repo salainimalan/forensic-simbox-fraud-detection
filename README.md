@@ -62,7 +62,7 @@ Thresholds are selected using validation data, while final metrics are calculate
 
 Notebook 15 produces a transparent evidence-based risk score for investigation prioritization. Its current top-k ranking validation requires further correction before the risk ranking is presented as a validated operational result. The machine-learning comparison and the forensic evidence analysis remain the primary project results.
 
-The research paper is not included in this repository at this stage.
+The management publication is not included in this repository at this stage.
 
 ## Authors
 
