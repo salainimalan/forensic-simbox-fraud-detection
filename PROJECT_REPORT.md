@@ -14,7 +14,7 @@ The objective is to investigate whether behavioral patterns in synthetic CDR dat
 
 ## 2. Dataset and scope
 
-The primary experiment uses the FraudZen `all_naive_12%_200sims` scenario. The local trace contains 86,873 events, 3,851 SIMs/subscribers, and 200 labeled fraudulent SIMs, with 199 fraudulent SIMs observed in the local trace. The project uses the local CDR trace and fraud-label file; generated outputs are excluded from Git tracking because they can be recreated.
+The primary experiment uses the FraudZen `12%_200sims` scenario. The local trace contains 86,873 events, 3,851 SIMs/subscribers, and 200 labeled fraudulent SIMs, with 199 fraudulent SIMs observed in the local trace. The project uses the local CDR trace and fraud-label file; generated outputs are excluded from Git tracking because they can be recreated.
 
 ## 3. Forensic analysis
 
