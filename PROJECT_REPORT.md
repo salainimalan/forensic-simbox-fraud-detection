@@ -22,6 +22,27 @@ The analysis covers statistical activity, traffic direction, temporal spread, mo
 
 These are descriptive findings. They explain the evidence used by the model but are not treated as fraud decisions on their own.
 
+### Selected forensic comparison
+
+| Layer | Feature | Legitimate median | Fraudulent median | Difference | Finding |
+|---|---|---:|---:|---:|---|
+| Statistical | Activity count | 2 | 3 | 1 | Higher among known fraudulent SIMs |
+| Statistical | Total duration | 53 | 209 | 156 | Higher among known fraudulent SIMs |
+| Statistical | Unique contacts | 1 | 3 | 2 | Higher among known fraudulent SIMs |
+| Statistical | Active hours | 1 | 3 | 2 | Higher among known fraudulent SIMs |
+| Traffic | Outgoing share | 0.00 | 1.00 | 1.00 | Higher among known fraudulent SIMs |
+| Traffic | Duration per activity | 28.67 | 62.67 | 34.00 | Higher among known fraudulent SIMs |
+| Temporal | Activity span | 22 s | 48,033 s | 48,011 s | Higher among known fraudulent SIMs |
+| Temporal | Night activity ratio | 0.00 | 0.25 | 0.25 | Higher among known fraudulent SIMs |
+| Temporal | Burstiness | -0.062 | -0.986 | -0.924 | Lower among known fraudulent SIMs |
+| Mobility | Observed cell changes | 1 | 2 | 1 | Higher among known fraudulent SIMs |
+| Mobility | Cell change rate | 0.50 | 0.67 | 0.17 | Higher among known fraudulent SIMs |
+| Social | Unique contacts | 1 | 3 | 2 | Higher among known fraudulent SIMs |
+| Social | Outgoing degree | 1 | 3 | 2 | Higher among known fraudulent SIMs |
+| Social | Incoming degree | 1 | 0 | -1 | Lower among known fraudulent SIMs |
+
+![Selected forensic median differences](docs/forensic_median_separation.svg)
+
 ## 4. Static versus history-aware modeling
 
 A static table has one row per SIM for the whole day:
@@ -67,11 +88,7 @@ All model partitions are grouped by SIM. This prevents rows from the same subscr
 
 The project contributes a compact forensic workflow that combines evidence aggregation with history-aware supervised detection. Its main result is empirical: current and recent subscriber behavior provide substantially more useful information than a single static daily summary in the selected synthetic scenario.
 
-## 9. Limitations and next work
-
-The dataset is synthetic and covers one day. It does not establish multi-day persistence, live-operator generalization, or production calibration. Further work should use multi-day traces, repeated simulation seeds, independent scenario validation, calibrated probabilities, operator-reviewed labels, and a corrected top-k risk-ranking evaluation.
-
-The management publication is intentionally not included in this repository at this stage.
+The research paper is intentionally not included in this repository at this stage.
 
 ## Authors
 
