@@ -70,6 +70,39 @@ A history-aware table has multiple rows per SIM, one row per hour:
 SIM + hour -> current behavior + previous-hour behavior + recent cumulative behavior
 ```
 
+### Model-ready table columns
+
+The static model table contains one row per SIM and summarizes the complete observation period:
+
+| Column | Meaning |
+|---|---|
+| `sim` | SIM or subscriber identifier used for grouping. |
+| `static_events` | Total events for the SIM. |
+| `static_calls` | Total calls for the SIM. |
+| `static_outgoing` | Total outgoing events. |
+| `static_incoming` | Total incoming events. |
+| `static_international` | Total international events. |
+| `static_duration` | Total call duration. |
+| `static_contacts` | Number of unique contacts. |
+| `static_active_hours` | Number of hours in which the SIM was active. |
+| `static_fraud` | SIM-level ground-truth label. |
+
+The history-aware table contains one row per SIM-hour. It includes the following groups of fields:
+
+| Column group | Examples | Meaning |
+|---|---|---|
+| Identity and target | `sim`, `hour_ts`, `fraud` | SIM identifier, hour being scored, and SIM-level label. |
+| Current-hour behavior | `events`, `calls`, `outgoing`, `incoming`, `international`, `short_voice` | Activity observed during the current hour. |
+| Current-hour measurements | `duration_sum`, `duration_mean`, `unique_contacts`, `unique_imeis`, `unique_cells`, `night_events` | Duration, contact, device, cell, and night-activity evidence for the current hour. |
+| Previous-hour history | `events_lag1`, `calls_lag1`, `outgoing_lag1`, `duration_sum_lag1` | Activity during the immediately preceding hour. |
+| Recent history | `events_prev3h`, `calls_prev3h`, `outgoing_prev3h`, `unique_contacts_prev3h` | Activity accumulated over the previous three hours. |
+| Cumulative history | `events_cum`, `calls_cum`, `outgoing_cum`, `duration_sum_cum` | Activity accumulated up to the current hour. |
+| Time context | `hour_of_day`, `elapsed_hours` | Clock hour and time since the SIM first became active. |
+| Ratios and changes | `international_ratio`, `outgoing_ratio`, `short_voice_ratio`, `activity_change_vs_prev` | Normalized behavior and change relative to recent activity. |
+| Repeated daily profile | `static_events`, `static_calls`, `static_outgoing`, `static_duration`, `static_contacts`, `static_active_hours` | Complete-day SIM values repeated on each hourly row for comparison. |
+
+The static table gives the model one full-day profile. The history-aware table gives the model the current hour together with recent and cumulative behavior. For a strictly history-only experiment, the repeated `static_*` columns should be excluded; otherwise the model uses both hourly history and full-day summary information.
+
 History-aware features include current event and call counts, outgoing and incoming activity, duration, contacts, cell count, previous-hour activity, previous-three-hour activity, cumulative activity, hour of day, elapsed hours, ratios, and activity change. Prior-window features use earlier activity only, which preserves causal ordering and avoids using future behavior.
 
 ## 5. Model comparison
