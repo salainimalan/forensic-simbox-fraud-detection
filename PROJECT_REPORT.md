@@ -12,6 +12,20 @@ Professor: Dr. S. Johanan Joysingh
 
 The objective is to investigate whether behavioral patterns in synthetic CDR data can identify SIMs associated with naive SIMBox fraud. The project treats detection as a forensic analytics problem: first establish evidence patterns, then build a model, then produce an investigation-priority score.
 
+## What SIMBox fraud is
+
+A SIMBox, also called a GSM gateway, is a device that contains multiple mobile SIM cards and connects them to cellular modems. It can receive an international or VoIP call, select a local SIM, and originate the call into the mobile network as if it were a normal local call. The operator therefore sees local mobile traffic instead of the original international route. The usual flow is:
+
+```text
+International or VoIP call -> SIMBox -> Local SIM -> Mobile network -> Recipient
+```
+
+The financial objective is to bypass legitimate international interconnection routes and charges. This project detects the abnormal subscriber behavior left in CDRs by that process, including high outbound activity, multiple contacts, duration patterns, temporal spread, mobility signals, and social-network structure.
+
+![Example of a multi-SIM GSM gateway](docs/simbox-gateway-photo.png)
+
+*Example SIMBox or GSM gateway hardware. The photograph is included as project background for the device being investigated; the model uses CDR behavior rather than the image itself.*
+
 ## 2. Dataset and scope
 
 The primary experiment uses the FraudZen `12%_200sims` scenario. The local trace contains 86,873 events, 3,851 SIMs/subscribers, and 200 labeled fraudulent SIMs, with 199 fraudulent SIMs observed in the local trace. The project uses the local CDR trace and fraud-label file; generated outputs are excluded from Git tracking because they can be recreated.
@@ -72,6 +86,10 @@ The following values are held-out test results from the executed baseline compar
 | HistGradientBoosting | History-aware | 0.918 | 0.801 | 0.977 | 0.679 |
 
 History-aware modeling improves PR-AUC for all three directly comparable algorithms. Random Forest has the strongest PR-AUC. HistGradientBoosting has the strongest precision in the reported baseline comparison. A tuned HistGradientBoosting model is also retained as a strong advanced comparator.
+
+![History-aware model comparison](docs/history-aware-model-comparison.png)
+
+The model comparison plot shows the history-aware results used in the final analysis. The history-aware representation is the project’s main modeling contribution because it retains current behavior and recent subscriber history for each SIM-hour.
 
 ## 6. Forensic risk scoring
 
