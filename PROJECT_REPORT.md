@@ -32,7 +32,7 @@ These are descriptive findings. They explain the evidence used by the model but 
 | Statistical | Active hours | 1 | 3 | 2 | Higher among known fraudulent SIMs |
 | Traffic | Outgoing share | 0.2 | 1.00 | 0.98 | Higher among known fraudulent SIMs |
 | Traffic | Duration per activity | 28.67 | 62.67 | 34.00 | Higher among known fraudulent SIMs |
-| Temporal | Activity span | 22 s | 48,033 s | 48,011 s | Higher among known fraudulent SIMs |
+| Temporal | Activity span | 2220 s | 48,033 s | 48,011 s | Higher among known fraudulent SIMs |
 | Temporal | Night activity ratio | 0.00 | 0.25 | 0.25 | Higher among known fraudulent SIMs |
 | Mobility | Observed cell changes | 1 | 2 | 1 | Higher among known fraudulent SIMs |
 | Mobility | Cell change rate | 0.50 | 0.37 | 0.13 | Lower among known fraudulent SIMs |
